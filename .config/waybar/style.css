@@ -1,0 +1,125 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+@define-color wb-hvr-bg #6c5bc5;
+
+* {
+  color: @text;
+  font-family: "JetBrainsMono Nerd Font";
+  font-size: 13px;
+  font-weight: bold;
+  min-height: 5px;
+}
+
+window#waybar {
+  background-color: @base;
+  opacity: 0.95;
+  border-radius: 8px;
+}
+
+#workspaces,
+#clock,
+#temperature,
+#cpu,
+#memory,
+#pulseaudio,
+#button,
+#tray {
+  padding: 0 5px;
+}
+
+#window.empty {
+  background: rgba(0, 0, 0, 0);
+}
+
+#window {
+  color: @text;
+  margin: 2px;
+}
+#pulseaudio {
+  margin-right: 4px;
+}
+#temperature {
+  margin-left: 3px;
+}
+
+#clock {
+  font-size: 14px;
+}
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 0px;
+  color: #6c5bc5;
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.persistent {
+  color: #6c5bc5;
+}
+
+#workspaces button.active {
+  background: #2b2f38;
+  color: #6c5bc5;
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#workspaces button.persistent:nth-child(2) {
+  color: #6c5bc5;
+}
+
+#workspaces button.persistent:nth-child(3) {
+  color: #6c5bc5;
+}
+
+#workspaces button:hover {
+  background: @wb-hvr-bg;
+  color: #6c5bc5;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 0px;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-right: 0px;
+  color: #6c5bc5;
+  animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+  background: #6c5bc5;
+  color: #6c5bc5;
+  margin-left: 2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-right: 2px;
+  animation: tb_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
+
+#taskbar button:hover {
+  background: #6c5bc5;
+  color: #6c5bc5;
+  animation: tb_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(0.55, -0.68, 0.48, 1.682);
+}
